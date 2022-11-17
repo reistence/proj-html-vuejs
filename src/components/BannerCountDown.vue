@@ -3,13 +3,14 @@ export default {
   name: "BannerCountDown",
   data() {
     return {
-      days: null,
-      hours: null,
-      minutes: null,
-      seconds: null,
+      days: "",
+      hours: "",
+      minutes: "",
+      seconds: "",
     };
   },
   created() {
+    this.updateCount();
     setInterval(this.updateCount, 1000);
   },
   computed: {},
@@ -77,7 +78,7 @@ export default {
 
   .wrapper {
     position: absolute;
-    width: 50%;
+    width: 60%;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
@@ -87,14 +88,15 @@ export default {
       flex-direction: row;
       justify-content: center;
       align-items: stretch;
-
       gap: 1em;
+      width: 100%;
 
       div {
-        background-color: rgba(0, 0, 0, 0.77);
+        background-color: rgba(0, 0, 0, 0.671);
         padding: 1.5em;
         width: max-content;
         margin-bottom: 1em;
+        width: calc(100% / 4 - 1em);
         border-radius: 5px;
         color: $white;
         text-align: center;
@@ -129,12 +131,13 @@ export default {
     }
 
     .banner-txt {
+      margin-top: 2em;
       p {
         text-transform: uppercase;
         font-size: 1.4rem;
         text-align: center;
         margin-bottom: 1em;
-        font-weight: 500;
+        font-weight: 600;
       }
       div {
         width: 100%;
@@ -160,6 +163,7 @@ export default {
           font-weight: bold;
           text-transform: uppercase;
           padding: 1em 1em;
+          border-bottom: 3px solid $thunderbird;
         }
       }
     }

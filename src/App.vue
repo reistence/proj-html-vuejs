@@ -6,6 +6,8 @@ import Jumbotron from "./components/Jumbotron.vue";
 import AboutUs from "./components/AboutUs.vue";
 import BannerCountDown from "./components/BannerCountDown.vue";
 import SpeakersSlider from "./components/SpeakersSlider.vue";
+import EventsJournal from "./components/EventsJournal.vue";
+import AppFooter from "./components/AppFooter.vue";
 
 export default {
   components: {
@@ -14,6 +16,8 @@ export default {
     AboutUs,
     BannerCountDown,
     SpeakersSlider,
+    EventsJournal,
+    AppFooter,
   },
   data() {
     return {
@@ -29,6 +33,8 @@ export default {
   <AboutUs></AboutUs>
   <BannerCountDown></BannerCountDown>
   <SpeakersSlider></SpeakersSlider>
+  <EventsJournal></EventsJournal>
+  <AppFooter></AppFooter>
 </template>
 
 <style lang="scss">
