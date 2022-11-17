@@ -74,19 +74,28 @@ header {
         font-weight: bold;
         font-size: 0.9rem;
         position: relative;
+
+        &:hover {
+          color: $scarlet;
+        }
         i {
           font-size: 1rem;
         }
 
         &:after {
           content: " ";
-          color: $scarlet;
+          background-color: $scarlet;
           width: 100%;
           position: absolute;
-          height: 4px;
+          height: 0px;
           bottom: -10px;
           left: 0;
           z-index: 999;
+          display: inline-block;
+        }
+
+        &:hover::after {
+          height: 5px;
         }
       }
     }
