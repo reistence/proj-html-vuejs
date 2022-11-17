@@ -4,11 +4,16 @@ import { store } from "./store";
 import AppHeader from "./components/AppHeader.vue";
 import Jumbotron from "./components/Jumbotron.vue";
 import AboutUs from "./components/AboutUs.vue";
+import BannerCountDown from "./components/BannerCountDown.vue";
+import SpeakersSlider from "./components/SpeakersSlider.vue";
+
 export default {
   components: {
     AppHeader,
     Jumbotron,
     AboutUs,
+    BannerCountDown,
+    SpeakersSlider,
   },
   data() {
     return {
@@ -22,6 +27,8 @@ export default {
   <AppHeader></AppHeader>
   <Jumbotron></Jumbotron>
   <AboutUs></AboutUs>
+  <BannerCountDown></BannerCountDown>
+  <SpeakersSlider></SpeakersSlider>
 </template>
 
 <style lang="scss">

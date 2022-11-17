@@ -73,12 +73,12 @@ export default {
       }
       p {
         color: $gray;
-        font-weight: 100;
+        font-weight: 200;
       }
       a {
         color: $scarlet;
         font-style: italic;
-        font-weight: 100;
+        font-weight: 300;
       }
     }
   }
