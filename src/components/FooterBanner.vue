@@ -23,7 +23,7 @@ export default {
 <style lang="scss" scoped>
 @use "../styles/partials/variables" as *;
 .container-fluid {
-  background-color: $black;
+  background-color: black !important;
 }
 
 .container {
