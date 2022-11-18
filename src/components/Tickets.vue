@@ -52,6 +52,7 @@ export default {
           <div class="offer">
             <h4>{{ ticket.pass }}</h4>
             <p>{{ ticket.cost }}</p>
+            <h3 v-show="index === 1" class="ribbon">Featured!</h3>
           </div>
           <div class="details">
             <ul>
@@ -107,6 +108,40 @@ export default {
     background-color: $greybg;
     padding: 1em;
     border: none;
+    overflow: hidden;
+    position: relative;
+
+    .ribbon {
+      margin: 0;
+      padding: 0;
+      background: $scarlet;
+      font-size: 0.7rem;
+      font-weight: 500;
+      color: white;
+      padding: 0.5em 0;
+      position: absolute;
+      top: 0;
+      right: 0;
+      transform: translateX(30%) translateY(0%) rotate(45deg);
+      transform-origin: top left;
+    }
+    .ribbon:before,
+    .ribbon:after {
+      content: "";
+      position: absolute;
+      top: 0;
+      margin: 0 -1px; /* tweak */
+      width: 100%;
+      height: 100%;
+      background: $scarlet;
+    }
+    .ribbon:before {
+      right: 100%;
+    }
+
+    .ribbon:after {
+      left: 100%;
+    }
     h4 {
       text-transform: uppercase;
     }
@@ -139,4 +174,25 @@ export default {
     color: $white;
   }
 }
+
+// .ticket:nth-child(2) {
+//   position: relative;
+
+//   &::after {
+//     content: "Featured!";
+//     position: absolute;
+//     // top: 17px;
+//     // right: -50px;
+//     inset: 0 0 auto 0;
+//     font-size: 0.7rem;
+//     background-color: $scarlet;
+//     color: white;
+//     padding: 0.5em 2.3em;
+//     transform-origin: 100% 0;
+//     transform: translate(29.3%) rotate(45deg);
+//     overflow: hidden;
+//     box-shadow: 0 0 0 999px $scarlet;
+//     clip-path: inset(0 -100%);
+//   }
+//}
 </style>
