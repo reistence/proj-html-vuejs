@@ -50,15 +50,18 @@ export default {
       font-size: 4rem;
       margin-bottom: 0.3em;
     }
+    img {
+      width: 60%;
+    }
     ul {
       display: flex;
       flex-direction: row;
       flex-wrap: nowrap;
       align-items: center;
+      width: 60%;
       justify-content: center;
       gap: 1.5em;
-      margin: 1em 0;
-      margin-bottom: 1.5em;
+      margin: 0.5em auto 1.5em;
     }
     button {
       padding: 1em 1.5em;
