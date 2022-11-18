@@ -13,7 +13,6 @@ import Tickets from "./components/Tickets.vue";
 import PromoSection from "./components/PromoSection.vue";
 import Sponsors from "./components/Sponsors.vue";
 import AppFooter from "./components/AppFooter.vue";
-// import FooterBanner from "./components/FooterBanner.vue";
 
 export default {
   components: {
@@ -29,7 +28,6 @@ export default {
     PromoSection,
     Sponsors,
     AppFooter,
-    // FooterBanner,
   },
   data() {
     return {
@@ -52,7 +50,6 @@ export default {
   <PromoSection></PromoSection>
   <Sponsors></Sponsors>
   <AppFooter></AppFooter>
-  <!-- <FooterBanner></FooterBanner> -->
 </template>
 
 <style lang="scss">

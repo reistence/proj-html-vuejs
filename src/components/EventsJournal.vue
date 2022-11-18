@@ -1,6 +1,95 @@
 <script>
 export default {
   name: "EventsJournal",
+  data() {
+    return {
+      events: [
+        {
+          name: "day 1",
+          date: "25 May 2030",
+          active: false,
+        },
+        {
+          name: "day 2",
+          date: "23 May 2030",
+          active: false,
+        },
+        {
+          name: "day 3",
+          date: "24 May 2030",
+          active: false,
+        },
+        {
+          name: "day 4",
+          date: "25 May 2030",
+          active: false,
+        },
+        {
+          name: "day 5",
+          date: "26 May 2030",
+          active: false,
+        },
+      ],
+      eventDetails: [
+        {
+          time: "09:00 - 10:30",
+          room: "ROOM A",
+          speaker: "Laurence Francis",
+          topic: "welcome and introduction",
+          desciption:
+            "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quidem sequi, excepturi animi recusandae sint soluta?Lorem ipsum dolor sit amet consectetur adipisicing elit",
+          speakerImg: "-1",
+          active: true,
+        },
+        {
+          time: "10:00 - 11:30",
+          room: "ROOM C",
+          speaker: "John Doe",
+          topic: "Business Plans 101",
+          desciption:
+            "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quidem sequi, excepturi animi recusandae sint soluta?Lorem ipsum dolor sit amet consectetur adipisicing elit",
+          speakerImg: "-2",
+          active: false,
+        },
+        {
+          time: "11:00 - 12:30",
+          room: "ROOM 302",
+          speaker: "Bob Barkley",
+          topic: "Web 2.0",
+          desciption:
+            "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quidem sequi, excepturi animi recusandae sint soluta?Lorem ipsum dolor sit amet consectetur adipisicing elit",
+          speakerImg: "-7",
+          active: false,
+        },
+        {
+          time: "09:30 - 11:30",
+          room: "ROOM B",
+          speaker: "Sara O'neil",
+          topic: "IoT",
+          desciption:
+            "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quidem sequi, excepturi animi recusandae sint soluta?Lorem ipsum dolor sit amet consectetur adipisicing elit",
+          speakerImg: "-8",
+          active: false,
+        },
+        {
+          time: "09:00 - 12:00",
+          room: "ROOM A",
+          speaker: "Angelina Holy",
+          topic: "Final Project and salutation",
+          desciption:
+            "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quidem sequi, excepturi animi recusandae sint soluta?Lorem ipsum dolor sit amet consectetur adipisicing elit",
+          speakerImg: "-3",
+          active: false,
+        },
+      ],
+      currentEvent: 0,
+    };
+  },
+  methods: {
+    showEvent(clickedEvent) {
+      this.currentEvent = clickedEvent;
+    },
+  },
 };
 </script>
 <template>
@@ -16,50 +105,50 @@ export default {
     </div>
     <div class="program-schedule">
       <div class="program-header">
-        <div class="day">
-          <h3>DAY 1</h3>
-          <p>23 May 2023</p>
-        </div>
-        <div class="day">
-          <h3>DAY 2</h3>
-          <p>23 May 2030</p>
-        </div>
-        <div class="day">
-          <h3>DAY 3</h3>
-          <p>24 May 2030</p>
-        </div>
-        <div class="day">
-          <h3>DAY 4</h3>
-          <p>25 May 2030</p>
-        </div>
-        <div class="day">
-          <h3>DAY 5</h3>
-          <p>26 May 2030</p>
+        <div
+          class="day"
+          v-for="(event, index) in events"
+          :key="index"
+          @click="showEvent(index)"
+          :class="currentEvent === index ? 'active' : ''"
+        >
+          <h3>{{ event.name }}</h3>
+          <p>{{ event.date }}</p>
         </div>
       </div>
-      <div class="program">
+      <div
+        class="program"
+        v-for="(program, index) in eventDetails"
+        :key="index"
+        v-show="
+          currentEvent === index
+            ? (program.active = true)
+            : (program.active = false)
+        "
+      >
         <div class="program-info">
           <div>
             <i class="fa-regular fa-clock"></i>
-            <p>09:00 - 10:30</p>
+            <p>{{ program.time }}</p>
           </div>
           <div>
             <i class="fa-solid fa-location-arrow"></i>
-            <p>ROOM A</p>
+            <p>{{ program.room }}</p>
           </div>
           <div>
             <i class="fa-solid fa-user"></i>
-            <p>LAURENCE FRANCIS</p>
+            <p id="speaker">{{ program.speaker }}</p>
           </div>
         </div>
         <div class="program-content">
-          <h3>WELCOME AND INTRODUCTION</h3>
+          <h3>{{ program.topic }}</h3>
           <p>
-            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quidem
-            sequi, excepturi animi recusandae sint soluta?Lorem ipsum dolor sit
-            amet consectetur adipisicing elit.
+            {{ program.desciption }}
           </p>
-          <img src="../assets/images/speaker-1-150x150.jpg" alt="" />
+          <img
+            :src="`../src/assets/images/speaker${program.speakerImg}.jpg`"
+            :alt="program.speaker"
+          />
         </div>
       </div>
     </div>
@@ -102,8 +191,17 @@ export default {
     width: calc(100% / 6);
     padding: 1em;
     border-right: 1px solid $thunderbird;
+    cursor: pointer;
+    h3 {
+      text-transform: uppercase;
+      margin-bottom: 0.5em;
+    }
     p {
       font-weight: 200;
+    }
+
+    &.active {
+      background-color: $thunderbird;
     }
   }
 }
@@ -130,6 +228,12 @@ export default {
       align-items: baseline;
       width: 80%;
       margin: 1em auto;
+
+      p {
+        font-size: 0.7rem;
+        font-weight: 200;
+        color: $gray;
+      }
     }
   }
 
@@ -140,6 +244,7 @@ export default {
     h3 {
       font-weight: 400;
       margin: 0.5em 0 1em 0;
+      text-transform: uppercase;
     }
     p {
       font-size: 0.9rem;
@@ -150,6 +255,11 @@ export default {
     img {
       width: 3em;
     }
+  }
+  #speaker {
+    text-transform: uppercase;
+    font-weight: 300;
+    color: $scarlet;
   }
 }
 </style>
