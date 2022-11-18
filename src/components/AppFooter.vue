@@ -1,6 +1,10 @@
 <script>
+import FooterBanner from "./FooterBanner.vue";
 export default {
   name: "AppFooter",
+  components: {
+    FooterBanner,
+  },
   data() {
     return {
       lastYearGallery: [
@@ -116,6 +120,7 @@ export default {
       </section>
     </div>
   </div>
+  <FooterBanner></FooterBanner>
 </template>
 
 <style lang="scss" scoped>

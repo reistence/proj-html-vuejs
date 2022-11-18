@@ -9,7 +9,11 @@ import SpeakersSlider from "./components/SpeakersSlider.vue";
 import EventsJournal from "./components/EventsJournal.vue";
 import LocationBanner from "./components/LocationBanner.vue";
 import NewsSection from "./components/NewsSection.vue";
+import Tickets from "./components/Tickets.vue";
+import PromoSection from "./components/PromoSection.vue";
+import Sponsors from "./components/Sponsors.vue";
 import AppFooter from "./components/AppFooter.vue";
+// import FooterBanner from "./components/FooterBanner.vue";
 
 export default {
   components: {
@@ -21,7 +25,11 @@ export default {
     EventsJournal,
     LocationBanner,
     NewsSection,
+    Tickets,
+    PromoSection,
+    Sponsors,
     AppFooter,
+    // FooterBanner,
   },
   data() {
     return {
@@ -40,7 +48,11 @@ export default {
   <EventsJournal></EventsJournal>
   <LocationBanner></LocationBanner>
   <NewsSection></NewsSection>
+  <Tickets></Tickets>
+  <PromoSection></PromoSection>
+  <Sponsors></Sponsors>
   <AppFooter></AppFooter>
+  <!-- <FooterBanner></FooterBanner> -->
 </template>
 
 <style lang="scss">
