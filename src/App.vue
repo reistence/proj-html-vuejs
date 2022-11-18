@@ -7,6 +7,8 @@ import AboutUs from "./components/AboutUs.vue";
 import BannerCountDown from "./components/BannerCountDown.vue";
 import SpeakersSlider from "./components/SpeakersSlider.vue";
 import EventsJournal from "./components/EventsJournal.vue";
+import LocationBanner from "./components/LocationBanner.vue";
+import NewsSection from "./components/NewsSection.vue";
 import AppFooter from "./components/AppFooter.vue";
 
 export default {
@@ -17,6 +19,8 @@ export default {
     BannerCountDown,
     SpeakersSlider,
     EventsJournal,
+    LocationBanner,
+    NewsSection,
     AppFooter,
   },
   data() {
@@ -34,6 +38,8 @@ export default {
   <BannerCountDown></BannerCountDown>
   <SpeakersSlider></SpeakersSlider>
   <EventsJournal></EventsJournal>
+  <LocationBanner></LocationBanner>
+  <NewsSection></NewsSection>
   <AppFooter></AppFooter>
 </template>
 
