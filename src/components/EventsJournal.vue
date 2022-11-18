@@ -157,6 +157,10 @@ export default {
 <style lang="scss">
 @use "../styles/partials/variables" as *;
 
+.container {
+  padding: 3em 0;
+}
+
 .events-header {
   display: flex;
   flex-direction: row;
@@ -253,7 +257,8 @@ export default {
       color: $gray;
     }
     img {
-      width: 3em;
+      width: 4em;
+      border-radius: 5px;
     }
   }
   #speaker {

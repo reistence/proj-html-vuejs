@@ -43,6 +43,7 @@ export default {
   position: absolute;
   top: 50%;
   left: 50%;
+  width: 60%;
   transform: translate(-50%, -50%);
   color: $white;
   text-align: center;
@@ -52,10 +53,11 @@ export default {
   }
   h2 {
     font-size: 2.5rem;
-    margin-bottom: 1em;
+    margin-bottom: 0.5em;
   }
   h3 {
-    font-size: 1.8rem;
+    font-size: 1.7rem;
+    width: 100%;
   }
   a {
     color: $scarlet;

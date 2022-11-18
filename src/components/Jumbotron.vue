@@ -8,14 +8,16 @@ export default {
     <div class="jumbo-txt">
       <p>CONFERENCE ON</p>
       <h1>SOCIAL NETWORKS</h1>
-      <img src="../assets/images/1-item-2.jpg" alt="" />
-      <ul>
-        <li>23 - 26 may 2019</li>
-        /
-        <li>san francisco</li>
-        /
-        <li>8 speakers</li>
-      </ul>
+      <div>
+        <img src="../assets/images/1-item-2.jpg" alt="" />
+        <ul>
+          <li>23 - 26 may 2019</li>
+          /
+          <li>san francisco</li>
+          /
+          <li>8 speakers</li>
+        </ul>
+      </div>
       <button>register online</button>
     </div>
   </div>
@@ -50,17 +52,23 @@ export default {
       font-size: 4rem;
       margin-bottom: 0.3em;
     }
+
+    div {
+      width: 70%;
+      margin: 0 auto;
+    }
     img {
-      width: 60%;
+      width: 100%;
     }
     ul {
       display: flex;
       flex-direction: row;
       flex-wrap: nowrap;
       align-items: center;
-      width: 60%;
-      justify-content: center;
+      width: 100%;
+      justify-content: space-between;
       gap: 1.5em;
+      font-size: 0.9rem;
       margin: 0.5em auto 1.5em;
     }
     button {

@@ -13,6 +13,7 @@ import Tickets from "./components/Tickets.vue";
 import PromoSection from "./components/PromoSection.vue";
 import Sponsors from "./components/Sponsors.vue";
 import AppFooter from "./components/AppFooter.vue";
+import MapBanner from "./components/MapBanner.vue";
 
 export default {
   components: {
@@ -22,6 +23,7 @@ export default {
     BannerCountDown,
     SpeakersSlider,
     EventsJournal,
+    MapBanner,
     LocationBanner,
     NewsSection,
     Tickets,
@@ -44,6 +46,7 @@ export default {
   <BannerCountDown></BannerCountDown>
   <SpeakersSlider></SpeakersSlider>
   <EventsJournal></EventsJournal>
+  <MapBanner></MapBanner>
   <LocationBanner></LocationBanner>
   <NewsSection></NewsSection>
   <Tickets></Tickets>

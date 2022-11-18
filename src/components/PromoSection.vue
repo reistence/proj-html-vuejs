@@ -56,6 +56,7 @@ export default {
 .container {
   display: flex;
   flex-direction: row;
+  padding: 2em 0;
 }
 
 .presentation {

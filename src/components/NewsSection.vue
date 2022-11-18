@@ -57,11 +57,13 @@ export default {
   </div>
 </template>
 
-<style lang="scss" scopde>
+<style lang="scss" scoped>
 @use "../styles/partials/variables" as *;
 
 .container {
   padding: 3em 0;
+  height: 500px;
+  z-index: 999;
 }
 
 .news-header {
