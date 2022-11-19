@@ -104,6 +104,11 @@ export default {
 .ticket {
   width: calc(100% / 3);
   text-align: center;
+  transition: 500ms;
+
+  &:hover {
+    transform: scale(1.01) translateY(-5px);
+  }
   .offer {
     background-color: $greybg;
     padding: 1em;

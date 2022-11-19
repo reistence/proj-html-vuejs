@@ -141,7 +141,7 @@ export default {
         background-color: rgba(0, 0, 0, 0.532);
       }
       div:last-child {
-        background-color: rgba(0, 0, 0, 0.525);
+        background-color: rgba(0, 0, 0, 0.425);
       }
     }
 
