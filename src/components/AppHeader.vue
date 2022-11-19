@@ -1,4 +1,5 @@
 <script>
+import { onMounted } from "vue";
 import HeaderNav from "./HeaderNav.vue";
 export default {
   name: "AppHeader",
@@ -41,12 +42,21 @@ export default {
           link: "/shortcodes",
         },
       ],
+      scrollPosition: null,
     };
+  },
+  methods: {
+    updateScroll() {
+      this.scrollPosition = window.scrollY;
+    },
+  },
+  mounted() {
+    window.addEventListener("scroll", this.updateScroll);
   },
 };
 </script>
 <template>
-  <header>
+  <header :class="{ faded: scrollPosition > 50 }">
     <div class="container">
       <div class="logo">
         <img src="../assets/images/logo.png" alt="The Keynote" />
@@ -74,12 +84,32 @@ export default {
 @use "../styles/partials/variables" as *;
 
 header {
+  position: fixed;
+  height: 70px;
+  top: 0;
+  left: 0;
+  z-index: 999;
+  background-color: $white;
+  width: 100%;
+
+  &.faded {
+    background-color: rgba(255, 255, 255, 0.594);
+    transition: 500ms;
+    backdrop-filter: blur(10px);
+
+    box-shadow: 1px 1px 5px rgb(192, 191, 191);
+    &:hover {
+      background-color: $white;
+      filter: blur(0);
+    }
+  }
   .container {
     padding: 2em 0;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
+    height: 70px;
 
     .logo {
       width: 30%;

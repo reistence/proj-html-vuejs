@@ -27,6 +27,7 @@ export default {
 @use "../styles/partials/variables" as *;
 
 .container-fluid {
+  margin-top: 75px;
   height: 500px;
   position: relative;
   background-image: url(../assets/images/slider-1-bg.jpg);
@@ -74,7 +75,6 @@ export default {
       li {
         width: calc(100% / 3);
         position: relative;
-        border: 1px solid red;
 
         &:not(:last-child)::after {
           content: "/";
