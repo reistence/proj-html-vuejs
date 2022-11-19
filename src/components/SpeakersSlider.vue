@@ -151,7 +151,7 @@ div {
 .container {
   display: flex;
   flex-direction: column;
-  padding: 1em 0;
+  padding: 2em 0;
 
   .slider-header {
     display: flex;
@@ -196,10 +196,12 @@ div {
         text-transform: uppercase;
         margin-top: 1em;
         font-weight: 400;
-        margin-bottom: 1em;
+        margin-bottom: 0.5em;
       }
       p {
         font-weight: 200;
+        font-size: 0.8rem;
+        font-style: italic;
       }
     }
   }

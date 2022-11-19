@@ -144,19 +144,20 @@ export default {
     }
     h4 {
       text-transform: uppercase;
+      font-weight: 600;
     }
     p {
       color: $scarlet;
       margin-top: 0.5em;
       font-size: 0.9rem;
-      font-weight: 700;
+      font-weight: 600;
     }
   }
   .details {
     background-color: $white;
     font-weight: 300;
     color: $gray;
-    padding: 1em;
+    padding: 2em 1em;
     font-size: 0.8rem;
     font-style: italic;
 

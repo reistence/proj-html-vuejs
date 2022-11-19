@@ -56,7 +56,8 @@ export default {
     width: 100%;
     display: flex;
     flex-direction: row;
-    gap: 5em;
+    gap: 2em;
+    padding: 1em 0;
     justify-content: center;
   }
 
@@ -73,17 +74,21 @@ export default {
     }
     .txt {
       display: flex;
+      margin-top: 0.3em;
       flex-direction: column;
       justify-content: flex-start;
       align-items: flex-start;
-      gap: 1em;
+      gap: 1.5em;
       h3 {
         text-transform: uppercase;
         color: $black;
+        font-weight: 500;
+        font-size: 1.2rem;
       }
       p {
         color: $gray;
         font-weight: 200;
+        font-size: 0.9rem;
       }
       a {
         color: $scarlet;

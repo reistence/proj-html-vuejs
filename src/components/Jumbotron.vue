@@ -12,9 +12,9 @@ export default {
         <img src="../assets/images/1-item-2.jpg" alt="" />
         <ul>
           <li>23 - 26 may 2019</li>
-          /
+
           <li>san francisco</li>
-          /
+
           <li>8 speakers</li>
         </ul>
       </div>
@@ -54,7 +54,7 @@ export default {
     }
 
     div {
-      width: 70%;
+      width: 80%;
       margin: 0 auto;
     }
     img {
@@ -68,8 +68,23 @@ export default {
       width: 100%;
       justify-content: space-between;
       gap: 1.5em;
-      font-size: 0.9rem;
-      margin: 0.5em auto 1.5em;
+      font-size: 1rem;
+      margin: 1em auto 1.5em;
+
+      li {
+        width: calc(100% / 3);
+        position: relative;
+        border: 1px solid red;
+
+        &:not(:last-child)::after {
+          content: "/";
+          color: $white;
+          position: absolute;
+          transform: rotate(20deg);
+          top: 0;
+          right: -18px;
+        }
+      }
     }
     button {
       padding: 1em 1.5em;

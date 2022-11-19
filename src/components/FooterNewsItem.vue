@@ -16,7 +16,7 @@ export default {
 
 <style lang="scss" scoped>
 .newsitem {
-  margin-bottom: 2em;
+  margin-bottom: 1.5em;
   font-size: 0.7rem;
   font-weight: 200;
   margin-left: 1em;

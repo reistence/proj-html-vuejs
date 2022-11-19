@@ -16,7 +16,7 @@ export default defineComponent({
     <GoogleMap
       api-key="AIzaSyC3p3OkGqxXpXnrH1zdQE6H0CvtuRU1ceU
       "
-      style="width: 100%; height: 350px"
+      style="width: 100%; height: 400px"
       :center="center"
       :zoom="14"
     >

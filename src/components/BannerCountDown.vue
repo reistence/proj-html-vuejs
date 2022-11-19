@@ -69,16 +69,16 @@ export default {
 @use "../styles/partials/variables" as *;
 
 .container-fluid {
-  height: 500px;
+  height: 450px;
   background-image: url(../assets/images/coutdown-bg1.jpg);
   background-position: center;
-  background-size: cover;
+  background-size: auto;
   background-repeat: repeat-x;
   position: relative;
 
   .wrapper {
     position: absolute;
-    width: 60%;
+    width: 50%;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
@@ -93,22 +93,24 @@ export default {
 
       div {
         background-color: rgba(0, 0, 0, 0.671);
-        padding: 1.5em;
+        padding: 1.8em 1.8em;
         width: max-content;
         margin-bottom: 1em;
-        width: calc(100% / 4 - 1em);
+        width: calc(100% / 3);
         border-radius: 5px;
         color: $white;
-        text-align: center;
         position: relative;
 
         p:first-child {
-          font-size: 4rem;
+          font-size: 3.5rem;
           transition: all 300ms linear;
+          text-align: center;
         }
         p:nth-child(2) {
           text-transform: uppercase;
           font-size: 1rem;
+          font-weight: 300;
+          text-align: center;
         }
 
         // #secs {
@@ -128,6 +130,19 @@ export default {
         //   transform: translate(-50%, -50%);
         // }
       }
+
+      div:first-child {
+        background-color: rgba(0, 0, 0, 0.963);
+      }
+      div:nth-child(2) {
+        background-color: rgba(0, 0, 0, 0.671);
+      }
+      div:nth-child(3) {
+        background-color: rgba(0, 0, 0, 0.532);
+      }
+      div:last-child {
+        background-color: rgba(0, 0, 0, 0.525);
+      }
     }
 
     .banner-txt {
@@ -141,6 +156,7 @@ export default {
       }
       div {
         width: 100%;
+        height: 50px;
         display: flex;
         flex-direction: row;
         align-items: center;
@@ -149,20 +165,25 @@ export default {
 
         input {
           width: 50%;
-          height: 40px;
-          padding: 0.2em 0.5em;
-          font-size: 1rem;
+          height: 100%;
+          padding: 0.2em 1em;
+          font-size: 0.8rem;
           appearance: none;
           border: none;
+        }
+        ::placeholder {
+          color: rgb(207, 200, 200);
+          font-weight: 100;
         }
 
         button {
           background-color: $scarlet;
           color: white;
-          font-size: 0.8rem;
+          height: 100%;
+          font-size: 0.9rem;
           font-weight: bold;
           text-transform: uppercase;
-          padding: 1em 1em;
+          padding: 1em 1.5em;
           border-bottom: 3px solid $thunderbird;
         }
       }

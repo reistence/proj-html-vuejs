@@ -61,8 +61,8 @@ export default {
 @use "../styles/partials/variables" as *;
 
 .container {
-  padding: 3em 0;
-  height: 500px;
+  padding: 4em 0;
+  height: 550px;
   z-index: 999;
 }
 
@@ -89,7 +89,7 @@ export default {
     margin-bottom: 2em;
 
     & > * {
-      margin-bottom: 1em;
+      margin-bottom: 1.3em;
     }
     h4 {
       text-transform: uppercase;
@@ -97,6 +97,7 @@ export default {
 
     .date {
       letter-spacing: 0.1em;
+      font-style: italic;
     }
     p {
       font-weight: 300;

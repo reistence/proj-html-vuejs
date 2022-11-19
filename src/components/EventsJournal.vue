@@ -193,15 +193,17 @@ export default {
   .day {
     color: white;
     width: calc(100% / 6);
-    padding: 1em;
+    padding: 0.8em 1em;
     border-right: 1px solid $thunderbird;
     cursor: pointer;
     h3 {
       text-transform: uppercase;
-      margin-bottom: 0.5em;
+      margin-bottom: 0.3em;
+      font-size: 1rem;
     }
     p {
-      font-weight: 200;
+      font-weight: 300;
+      font-size: 0.9rem;
     }
 
     &.active {
@@ -215,11 +217,11 @@ export default {
   flex-direction: row;
   align-items: flex-start;
   justify-content: flex-start;
-  padding: 1em;
+  padding: 2.5em 1em;
   background-color: #f3f3f3;
+  height: 250px;
 
   &-info {
-    padding: 0em;
     width: 25%;
     font-size: 0.7rem;
 
@@ -243,7 +245,6 @@ export default {
 
   &-content {
     width: 65%;
-    padding: 0;
 
     h3 {
       font-weight: 400;
@@ -257,7 +258,9 @@ export default {
       color: $gray;
     }
     img {
-      width: 4em;
+      width: 3em;
+      height: 3em;
+      object-fit: cover;
       border-radius: 5px;
     }
   }

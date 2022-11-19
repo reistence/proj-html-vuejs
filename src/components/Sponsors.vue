@@ -62,7 +62,10 @@ export default {
 
 .container {
   text-align: center;
-  padding: 3em 0;
+  padding: 4em 0;
+}
+h2 {
+  font-size: 2rem;
 }
 p {
   font-weight: 300;

@@ -40,7 +40,7 @@ li {
 
   &:hover::after {
     animation: grow-border 500ms;
-    height: 5px;
+    height: 2px;
   }
 
   @keyframes grow-border {
@@ -48,7 +48,7 @@ li {
       height: 0;
     }
     100% {
-      height: 5px;
+      height: 2px;
     }
   }
 }
