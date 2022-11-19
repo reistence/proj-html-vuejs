@@ -1,17 +1,45 @@
 <script>
+import HeaderNav from "./HeaderNav.vue";
 export default {
   name: "AppHeader",
+  components: {
+    HeaderNav,
+  },
   data() {
     return {
       navHeaderList: [
-        "home",
-        "pages",
-        "program",
-        "tickets",
-        "speakers",
-        "papers",
-        "blog",
-        "shortcodes",
+        {
+          name: "home",
+          link: "/home",
+        },
+        {
+          name: "pages",
+          link: "/pages",
+        },
+        {
+          name: "program",
+          link: "/programs",
+        },
+        {
+          name: "tickets",
+          link: "/tickets",
+        },
+        {
+          name: "speakers",
+          link: "/speakers",
+        },
+        {
+          name: "papers",
+          link: "/papers",
+        },
+        {
+          name: "blog",
+          link: "/blog",
+        },
+        {
+          name: "shortcodes",
+          link: "/shortcodes",
+        },
       ],
     };
   },
@@ -23,11 +51,15 @@ export default {
       <div class="logo">
         <img src="../assets/images/logo.png" alt="The Keynote" />
       </div>
+
       <nav>
         <ul>
-          <li v-for="(item, index) in navHeaderList" :key="index">
-            {{ item }}
-          </li>
+          <HeaderNav
+            v-for="(item, index) in navHeaderList"
+            :key="index"
+            :NavItems="item"
+          >
+          </HeaderNav>
           |
           <li class="lens">
             <i class="fa-solid fa-magnifying-glass"></i>
@@ -63,41 +95,42 @@ header {
     ul {
       display: flex;
       flex-direction: row;
-      flex-wrap: wrap;
+      flex-wrap: nowrap;
       justify-content: space-between;
       align-items: center;
       gap: 1em;
+      color: $gray;
 
       li {
-        text-transform: uppercase;
-        color: $naturalGrey;
-        font-weight: bold;
-        font-size: 0.9rem;
         position: relative;
-
-        &:hover {
-          color: $scarlet;
-        }
-        i {
-          font-size: 1rem;
-        }
-
-        &:after {
-          content: " ";
-          background-color: $scarlet;
-          width: 100%;
-          position: absolute;
-          height: 0px;
-          bottom: -10px;
-          left: 0;
-          z-index: 999;
-          display: inline-block;
-        }
-
-        &:hover::after {
-          height: 5px;
-        }
+        cursor: pointer;
       }
+      i {
+        font-size: 1rem;
+        color: $gray;
+      }
+
+      // li:last-child {
+      //   &:hover {
+      //     color: $scarlet;
+      //   }
+
+      //   &:after {
+      //     content: " ";
+      //     background-color: $scarlet;
+      //     width: 100%;
+      //     position: absolute;
+      //     height: 0px;
+      //     bottom: -10px;
+      //     left: 0;
+      //     z-index: 999;
+      //     display: inline-block;
+      //   }
+
+      //   &:hover::after {
+      //     height: 5px;
+      //   }
+      // }
     }
   }
 }

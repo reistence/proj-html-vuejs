@@ -1,8 +1,11 @@
 <script>
+import FooterNewsItem from "./FooterNewsItem.vue";
 import FooterBanner from "./FooterBanner.vue";
+
 export default {
   name: "AppFooter",
   components: {
+    FooterNewsItem,
     FooterBanner,
   },
   data() {
@@ -57,6 +60,24 @@ export default {
           img: "photodune-8795110-overhead-of-essentials-denim-clothes-m-150.jpg",
         },
       ],
+      recentNews: [
+        {
+          title: "sem porta mollis parturient",
+          link: "/newslink1",
+        },
+        {
+          title: "nullam lorem matis purus",
+          link: "/newslink2",
+        },
+        {
+          title: "nibh sem sit ullamcorper",
+          link: "/newslink3",
+        },
+        {
+          title: "magna pars studiorum",
+          link: "/newslink4",
+        },
+      ],
     };
   },
 };
@@ -83,22 +104,11 @@ export default {
       <section>
         <h4>RECENT NEWS</h4>
         <ul>
-          <li>
-            <span><i class="fa-solid fa-chevron-right"></i></span> sem porta
-            mollis parturient
-          </li>
-          <li>
-            <span><i class="fa-solid fa-chevron-right"></i></span> nullam lorem
-            mattis purus
-          </li>
-          <li>
-            <span><i class="fa-solid fa-chevron-right"></i></span> nibh sem sit
-            ullamcorper
-          </li>
-          <li>
-            <span><i class="fa-solid fa-chevron-right"></i></span> magna pars
-            studiorum
-          </li>
+          <FooterNewsItem
+            v-for="(news, index) in recentNews"
+            :key="index"
+            :newsItem="news"
+          ></FooterNewsItem>
         </ul>
       </section>
       <section>
@@ -145,6 +155,8 @@ export default {
       }
       h4 {
         color: $white;
+        margin-bottom: 2em;
+        font-weight: 400;
       }
       p {
         font-size: 0.9rem;
@@ -173,13 +185,6 @@ export default {
         text-transform: uppercase;
         font-size: 0.8rem;
         list-style-position: inside;
-
-        li {
-          margin-bottom: 1em;
-          span {
-            font-size: 0.6rem;
-          }
-        }
       }
 
       .img-wrapper {
