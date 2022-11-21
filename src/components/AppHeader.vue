@@ -183,6 +183,7 @@ header {
       .ham-nav {
         display: block;
         position: relative;
+        cursor: pointer;
 
         ul {
           position: absolute;

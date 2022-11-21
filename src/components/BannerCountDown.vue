@@ -93,13 +93,16 @@ export default {
 
       div {
         background-color: rgba(0, 0, 0, 0.671);
-        padding: 1.8em 1.8em;
+        padding: 1.5em 1.5em;
         width: max-content;
-        margin-bottom: 1em;
+
         width: calc(100% / 3);
         border-radius: 5px;
         color: $white;
         position: relative;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
 
         p:first-child {
           font-size: 3.5rem;
@@ -180,9 +183,10 @@ export default {
       .countdown {
         flex-wrap: wrap;
         div {
-          p {
-            font-size: 1rem !important;
-            text-transform: lowercase !important;
+          padding: 1em;
+          p:first-child {
+            font-size: 2rem;
+            text-transform: lowercase;
           }
         }
       }
@@ -194,6 +198,9 @@ export default {
         }
         div {
           flex-direction: column;
+          input {
+            width: 100%;
+          }
           button {
             font-size: 0.7rem;
             padding: 0.5em;
