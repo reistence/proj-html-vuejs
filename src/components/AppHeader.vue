@@ -138,6 +138,11 @@ header {
       i {
         font-size: 1rem;
         color: $gray;
+
+        &:hover {
+          transform: scale(1.1);
+          transition: 300ms;
+        }
       }
 
       // li:last-child {

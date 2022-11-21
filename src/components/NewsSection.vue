@@ -102,6 +102,7 @@ export default {
 .container {
   padding: 4em 0 2em;
   z-index: 999;
+  height: 600px;
 }
 
 .news-header {
@@ -168,7 +169,7 @@ export default {
       }
       .long {
         overflow: scroll;
-        height: 150px;
+        height: 100px;
       }
 
       a {
