@@ -1,5 +1,6 @@
 <script>
 import { store } from "./store";
+
 // COMPONENTS
 import AppHeader from "./components/AppHeader.vue";
 import Jumbotron from "./components/Jumbotron.vue";

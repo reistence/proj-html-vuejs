@@ -24,5 +24,10 @@ export default {
     font-size: 0.6rem;
     margin-right: 0.6em;
   }
+
+  &:hover {
+    color: white;
+    transition: 300ms;
+  }
 }
 </style>

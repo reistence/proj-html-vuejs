@@ -202,19 +202,19 @@ export default {
       flex-direction: column;
       align-items: center;
       justify-content: center;
-      transition: 900ms;
 
       .card-img {
         border-radius: 5px;
         position: relative;
-        transition: 900ms;
+
         img {
           display: block;
         }
         &:hover {
+          transition: 500ms;
           .layer {
-            display: flex;
-            transition: 900ms;
+            transition: 500ms;
+            opacity: 1;
           }
         }
       }
@@ -222,13 +222,14 @@ export default {
       .layer {
         background-color: #bf341f8c;
         position: absolute;
-        transition: 900ms;
+
         width: 100%;
         top: 0%;
         left: 0;
         height: 100%;
         color: $white;
-        display: none;
+        display: flex;
+        opacity: 0;
         justify-content: center;
         align-items: center;
         div {

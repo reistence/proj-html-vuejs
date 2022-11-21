@@ -1,13 +1,42 @@
 <script>
+// import Vue from "vue";
+// import Embed from "v-video-embed";
+
+// global register
+// Vue.use(Embed);
+import { vueVimeoPlayer } from "vue-vimeo-player";
+
 export default {
   name: "PromoSection",
+  data() {
+    return {
+      videoId: "84467622",
+      options: {
+        responsive: true,
+        autoplay: false,
+        byline: false,
+        dnt: true,
+        title: false,
+      },
+    };
+  },
+  components: {
+    vueVimeoPlayer,
+  },
 };
 </script>
 <template>
   <div class="container">
     <div class="presentation">
       <h2>presentation</h2>
-      <img src="../assets/images/461365506_640.jpg" alt="Last Conference" />
+      <div class="vidWrapper">
+        <vueVimeoPlayer
+          :video-id="videoId"
+          :options="options"
+          ref="player"
+        ></vueVimeoPlayer>
+      </div>
+      <!-- <img src="../assets/images/461365506_640.jpg" alt="Last Conference" /> -->
     </div>
     <div class="twitter-feeds">
       <h2>twitter feeds</h2>
@@ -57,16 +86,18 @@ export default {
   display: flex;
   flex-direction: row;
   padding: 2em 0;
+  gap: 5em;
 }
 
 .presentation {
-  width: 50%;
+  width: 40%;
   h2 {
     text-transform: uppercase;
+    margin-bottom: 2em;
   }
 
-  img {
-    padding: 3em;
+  .vidWrapper {
+    margin-left: 2em;
   }
 }
 
