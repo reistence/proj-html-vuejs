@@ -178,6 +178,11 @@ export default {
     padding: 1em 0;
     background-color: $scarlet;
     color: $white;
+
+    &:hover {
+      transform: scaleY(1.2);
+      transition: 300ms;
+    }
   }
 }
 
