@@ -20,6 +20,8 @@ export default {
   font-size: 0.7rem;
   font-weight: 200;
   margin-left: 1em;
+  transition: 300ms;
+
   span {
     font-size: 0.6rem;
     margin-right: 0.6em;

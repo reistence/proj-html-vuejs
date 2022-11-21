@@ -113,6 +113,12 @@ header {
 
     .logo {
       width: 30%;
+      transition: 500ms;
+      cursor: pointer;
+      &:hover {
+        transform: scale(1.1);
+        transition: 500ms;
+      }
       img {
         width: 60%;
       }
@@ -138,6 +144,7 @@ header {
       i {
         font-size: 1rem;
         color: $gray;
+        transition: 300ms;
 
         &:hover {
           transform: scale(1.1);

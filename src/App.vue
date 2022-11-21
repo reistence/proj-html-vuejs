@@ -42,17 +42,19 @@ export default {
 
 <template>
   <AppHeader></AppHeader>
-  <Jumbotron></Jumbotron>
-  <AboutUs></AboutUs>
-  <BannerCountDown></BannerCountDown>
-  <SpeakersSlider></SpeakersSlider>
-  <EventsJournal></EventsJournal>
-  <MapBanner></MapBanner>
-  <LocationBanner></LocationBanner>
-  <NewsSection></NewsSection>
-  <Tickets></Tickets>
-  <PromoSection></PromoSection>
-  <Sponsors></Sponsors>
+  <main>
+    <Jumbotron></Jumbotron>
+    <AboutUs></AboutUs>
+    <BannerCountDown></BannerCountDown>
+    <SpeakersSlider></SpeakersSlider>
+    <EventsJournal></EventsJournal>
+    <MapBanner></MapBanner>
+    <LocationBanner></LocationBanner>
+    <NewsSection></NewsSection>
+    <Tickets></Tickets>
+    <PromoSection></PromoSection>
+    <Sponsors></Sponsors>
+  </main>
   <AppFooter></AppFooter>
 </template>
 

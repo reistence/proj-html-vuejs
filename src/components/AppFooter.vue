@@ -171,6 +171,14 @@ export default {
         justify-content: space-between;
         align-items: center;
         gap: 1em;
+        i {
+          transition: 400ms;
+        }
+
+        i:hover {
+          transform: scale(1.5);
+          transition: 300ms;
+        }
       }
 
       button {
@@ -195,6 +203,12 @@ export default {
         gap: 0.5em;
         img {
           width: calc(100% / 4 - 0.5em);
+          transition: 300ms;
+          cursor: pointer;
+          &:hover {
+            transform: scale(1.2);
+            transition: 300ms;
+          }
         }
       }
     }

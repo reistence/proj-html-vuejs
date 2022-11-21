@@ -28,6 +28,12 @@ ul {
 button {
   border: none;
   cursor: pointer;
+  transition: 300ms;
+
+  &:hover {
+    transform: scale(1.05);
+    transition: 300ms;
+  }
 }
 
 .container {

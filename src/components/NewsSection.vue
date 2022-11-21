@@ -38,7 +38,6 @@ export default {
           showMore: false,
         },
       ],
-      readMore: false,
     };
   },
   methods: {
@@ -88,7 +87,7 @@ export default {
             v-show="newsArticle.showMore"
             href=""
             @click.prevent="showFullTxt(index)"
-            >Read less</a
+            >Read Less</a
           >
         </div>
       </div>
@@ -126,7 +125,7 @@ export default {
     width: calc(100% / 3);
     height: 350px;
     margin-bottom: 2em;
-    // overflow: scroll;
+    transition: 300ms;
 
     .card-img {
       position: relative;
@@ -177,10 +176,12 @@ export default {
         font-weight: 300;
         font-style: italic;
       }
-      &:hover {
-        .sticky {
-          display: block;
-        }
+    }
+    &:hover {
+      transition: 300ms;
+      .sticky {
+        display: block;
+        transition: 300ms;
       }
     }
   }

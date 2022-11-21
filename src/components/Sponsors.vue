@@ -85,5 +85,12 @@ p {
 
 .sponsor {
   background-color: $white;
+  transition: 300ms;
+  cursor: pointer;
+
+  &:hover {
+    transform: scale(1.2);
+    transition: 300ms;
+  }
 }
 </style>

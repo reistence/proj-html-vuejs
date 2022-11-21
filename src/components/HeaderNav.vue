@@ -24,6 +24,7 @@ li {
 
   &:hover {
     color: $scarlet;
+    transition: 200ms;
   }
 
   &:after {
@@ -39,8 +40,8 @@ li {
   }
 
   &:hover::after {
-    animation: grow-border 500ms;
-    height: 2px;
+    animation: grow-border 200ms;
+    height: 3px;
   }
 
   @keyframes grow-border {
