@@ -186,4 +186,16 @@ export default {
     }
   }
 }
+
+@media screen and (max-width: 800px) {
+  .container {
+    height: auto;
+  }
+
+  .news-articles {
+    .card {
+      margin-bottom: 0;
+    }
+  }
+}
 </style>

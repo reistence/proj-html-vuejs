@@ -93,4 +93,10 @@ p {
     transition: 300ms;
   }
 }
+
+@media screen and (max-width: 800px) {
+  .sponsors-row {
+    flex-wrap: wrap;
+  }
+}
 </style>

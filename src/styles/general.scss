@@ -46,3 +46,9 @@ button {
   width: 100%;
   // border: 1px solid red;
 }
+
+@media screen and (max-width: 800px) {
+  .container {
+    width: 95%;
+  }
+}

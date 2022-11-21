@@ -186,24 +186,29 @@ export default {
   }
 }
 
-// .ticket:nth-child(2) {
-//   position: relative;
-
-//   &::after {
-//     content: "Featured!";
-//     position: absolute;
-//     // top: 17px;
-//     // right: -50px;
-//     inset: 0 0 auto 0;
-//     font-size: 0.7rem;
-//     background-color: $scarlet;
-//     color: white;
-//     padding: 0.5em 2.3em;
-//     transform-origin: 100% 0;
-//     transform: translate(29.3%) rotate(45deg);
-//     overflow: hidden;
-//     box-shadow: 0 0 0 999px $scarlet;
-//     clip-path: inset(0 -100%);
-//   }
-//}
+@media screen and (max-width: 800px) {
+  .container-fluid {
+    height: auto;
+    .container {
+      position: static;
+      top: 0;
+      left: 0;
+      transform: none;
+      .tickets-row {
+        flex-direction: column;
+        .ticket {
+          width: 100%;
+          .details {
+            ul {
+              display: flex;
+              flex-direction: row;
+              flex-wrap: wrap;
+              gap: 0.8em;
+            }
+          }
+        }
+      }
+    }
+  }
+} ;
 </style>

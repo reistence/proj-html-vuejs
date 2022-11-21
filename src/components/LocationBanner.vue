@@ -97,4 +97,12 @@ export default {
     }
   }
 }
+@media screen and (max-width: 800px) {
+  .contacts-block {
+    .contacts {
+      flex-direction: column;
+      gap: 0.5em;
+    }
+  }
+}
 </style>

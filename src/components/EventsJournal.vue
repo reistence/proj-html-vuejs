@@ -270,4 +270,22 @@ export default {
     color: $scarlet;
   }
 }
+
+@media screen and (max-width: 800px) {
+  .events-header {
+    flex-direction: column;
+    gap: 1em;
+    align-items: flex-start;
+    p {
+      width: 100%;
+    }
+  }
+  .program-header {
+    .day {
+      p {
+        font-size: 0.6rem;
+      }
+    }
+  }
+}
 </style>

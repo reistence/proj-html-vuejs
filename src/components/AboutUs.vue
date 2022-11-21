@@ -100,5 +100,14 @@ export default {
       }
     }
   }
+
+  @media screen and (max-width: 800px) {
+    .section-row {
+      flex-direction: column;
+      section {
+        width: 100%;
+      }
+    }
+  }
 }
 </style>

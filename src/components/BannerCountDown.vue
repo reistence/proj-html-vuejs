@@ -112,23 +112,6 @@ export default {
           font-weight: 300;
           text-align: center;
         }
-
-        // #secs {
-        //   width: 10em;
-        // }
-
-        // #secsN {
-        //   position: absolute !important;
-        //   top: 45%;
-        //   left: 50%;
-        //   transform: translate(-50%, -50%);
-        // }
-        // #secsP {
-        //   position: absolute;
-        //   bottom: 15%;
-        //   left: 50%;
-        //   transform: translate(-50%, -50%);
-        // }
       }
 
       div:first-child {
@@ -185,6 +168,36 @@ export default {
           text-transform: uppercase;
           padding: 1em 1.5em;
           border-bottom: 3px solid $thunderbird;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .container-fluid {
+    .wrapper {
+      .countdown {
+        flex-wrap: wrap;
+        div {
+          p {
+            font-size: 1rem !important;
+            text-transform: lowercase !important;
+          }
+        }
+      }
+
+      .banner-txt {
+        p {
+          font-size: 1rem;
+          margin-bottom: 1.5em;
+        }
+        div {
+          flex-direction: column;
+          button {
+            font-size: 0.7rem;
+            padding: 0.5em;
+          }
         }
       }
     }

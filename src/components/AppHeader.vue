@@ -43,11 +43,15 @@ export default {
         },
       ],
       scrollPosition: null,
+      hamMenu: false,
     };
   },
   methods: {
     updateScroll() {
       this.scrollPosition = window.scrollY;
+    },
+    showMenu() {
+      this.hamMenu = !this.hamMenu;
     },
   },
   mounted() {
@@ -76,6 +80,16 @@ export default {
           </li>
         </ul>
       </nav>
+      <div class="ham-nav">
+        <i @click="showMenu" class="fa-solid fa-bars"></i>
+        <ul v-show="hamMenu">
+          <HeaderNav
+            v-for="(item, index) in navHeaderList"
+            :key="index"
+            :NavItems="item"
+          ></HeaderNav>
+        </ul>
+      </div>
     </div>
   </header>
 </template>
@@ -149,6 +163,36 @@ header {
         &:hover {
           transform: scale(1.1);
           transition: 300ms;
+        }
+      }
+    }
+  }
+
+  .ham-nav {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  header {
+    .container {
+      nav {
+        display: none;
+      }
+
+      .ham-nav {
+        display: block;
+        position: relative;
+
+        ul {
+          position: absolute;
+          top: 30px;
+          left: -70px;
+          display: flex;
+          flex-direction: column;
+          background-color: $white;
+          padding: 0.5em;
+          align-items: flex-start;
         }
       }
     }

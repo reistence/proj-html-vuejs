@@ -137,4 +137,16 @@ export default {
     color: $scarlet;
   }
 }
+
+@media screen and (max-width: 800px) {
+  .container {
+    flex-direction: column;
+    .presentation {
+      width: 100%;
+    }
+    .twitter-feeds {
+      width: 100%;
+    }
+  }
+}
 </style>

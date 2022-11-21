@@ -213,5 +213,14 @@ export default {
       }
     }
   }
+
+  @media screen and (max-width: 800px) {
+    .container {
+      flex-wrap: wrap;
+      section {
+        width: 100%;
+      }
+    }
+  }
 }
 </style>

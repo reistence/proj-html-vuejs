@@ -94,6 +94,26 @@ export default {
       border-radius: 5px;
       font-size: 1rem;
     }
+
+    @media screen and (max-width: 800px) {
+      h1 {
+        font-size: 2rem;
+      }
+
+      p {
+        font-size: 1.5rem;
+      }
+      ul {
+        flex-direction: row;
+
+        li {
+          font-size: 0.6rem;
+        }
+      }
+      button {
+        font-size: 0.7rem;
+      }
+    }
   }
 }
 </style>

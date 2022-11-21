@@ -50,4 +50,16 @@ li:not(:last-child)::after {
   top: 0;
   right: -9px;
 }
+
+@media screen and (max-width: 800px) {
+  .container {
+    flex-wrap: wrap;
+    gap: 1em;
+  }
+
+  ul {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+}
 </style>
