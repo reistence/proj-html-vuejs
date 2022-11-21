@@ -109,7 +109,7 @@ export default {
 </script>
 
 <template>
-  <div>
+  <div class="wrapper">
     <div class="container">
       <div class="slider-header">
         <h2>speakers</h2>
@@ -129,11 +129,20 @@ export default {
           v-show="speaker.active"
           :key="index"
         >
-          <img
-            :src="`../src/assets/images/speaker${speaker.img}.jpg`"
-            :alt="speaker.name"
-            srcset=""
-          />
+          <div class="card-img">
+            <img
+              :src="`../src/assets/images/speaker${speaker.img}.jpg`"
+              :alt="speaker.name"
+              srcset=""
+            />
+            <div class="layer">
+              <div>
+                <i class="fa-brands fa-twitter"></i>
+                <i class="fa-brands fa-facebook-f"></i>
+                <i class="fa-brands fa-linkedin"></i>
+              </div>
+            </div>
+          </div>
           <h4>{{ speaker.name }}</h4>
           <p>{{ speaker.role }}</p>
         </div>
@@ -145,7 +154,7 @@ export default {
 <style lang="scss" scoped>
 @use "../styles/partials/variables" as *;
 
-div {
+.wrapper {
   background-color: $greybg;
 }
 .container {
@@ -189,8 +198,45 @@ div {
     .speaker-card {
       width: calc(100% / 4 - 1em);
       text-align: center;
-      img {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      transition: 900ms;
+
+      .card-img {
         border-radius: 5px;
+        position: relative;
+        transition: 900ms;
+        img {
+          display: block;
+        }
+        &:hover {
+          .layer {
+            display: flex;
+            transition: 900ms;
+          }
+        }
+      }
+
+      .layer {
+        background-color: #bf341f8c;
+        position: absolute;
+        transition: 900ms;
+        width: 100%;
+        top: 0%;
+        left: 0;
+        height: 100%;
+        color: $white;
+        display: none;
+        justify-content: center;
+        align-items: center;
+        div {
+          & > * {
+            margin-right: 0.5em;
+            cursor: pointer;
+          }
+        }
       }
       h4 {
         text-transform: uppercase;

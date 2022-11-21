@@ -42,7 +42,15 @@ export default {
     </div>
     <div class="news-articles">
       <div class="card" v-for="(newsArticle, index) in news" :key="index">
-        <img :src="`../src/assets/images/${newsArticle.img}`" alt="" />
+        <div class="card-img">
+          <img
+            :src="`../src/assets/images/${newsArticle.img}`"
+            :alt="newsArticle.title"
+          />
+          <div class="sticky">
+            <i class="fa-solid fa-bullhorn"></i> sticky post
+          </div>
+        </div>
         <p class="date">
           {{ newsArticle.date }} / {{ newsArticle.comments }} Comments
         </p>
@@ -88,6 +96,25 @@ export default {
     height: 300px;
     margin-bottom: 2em;
 
+    .card-img {
+      position: relative;
+      img {
+        display: block;
+      }
+      .sticky {
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        z-index: 999;
+        color: white;
+        background-color: $black;
+        padding: 0.7em 1em;
+        font-size: 0.6rem;
+        text-transform: uppercase;
+        display: none;
+      }
+    }
+
     & > * {
       margin-bottom: 1.3em;
     }
@@ -109,6 +136,11 @@ export default {
       color: $scarlet;
       font-weight: 300;
       font-style: italic;
+    }
+    &:hover {
+      .sticky {
+        display: block;
+      }
     }
   }
 }
