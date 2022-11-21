@@ -53,4 +53,10 @@ li {
     }
   }
 }
+
+// @media screen and (max-width: 850px) {
+//   li {
+//     display: none;
+//   }
+// }
 </style>

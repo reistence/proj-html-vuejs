@@ -151,28 +151,6 @@ header {
           transition: 300ms;
         }
       }
-
-      // li:last-child {
-      //   &:hover {
-      //     color: $scarlet;
-      //   }
-
-      //   &:after {
-      //     content: " ";
-      //     background-color: $scarlet;
-      //     width: 100%;
-      //     position: absolute;
-      //     height: 0px;
-      //     bottom: -10px;
-      //     left: 0;
-      //     z-index: 999;
-      //     display: inline-block;
-      //   }
-
-      //   &:hover::after {
-      //     height: 5px;
-      //   }
-      // }
     }
   }
 }
