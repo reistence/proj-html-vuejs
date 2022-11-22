@@ -71,7 +71,7 @@ export default {
   }
   p {
     font-weight: 300;
-    margin-bottom: 1em;
+    font-size: 0.9rem;
   }
 }
 
@@ -95,7 +95,7 @@ export default {
     div {
       display: flex;
       flex-direction: row;
-      align-items: flex-start;
+      align-items: center;
       gap: 0.5em;
       justify-content: center;
       font-weight: 300;

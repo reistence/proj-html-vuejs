@@ -178,6 +178,7 @@ export default {
         i:hover {
           transform: scale(1.5);
           transition: 300ms;
+          color: $scarlet;
         }
       }
 

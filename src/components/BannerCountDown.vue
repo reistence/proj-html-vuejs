@@ -10,16 +10,17 @@ export default {
     };
   },
   created() {
+    //start countdown when page is created
     this.updateCount();
     setInterval(this.updateCount, 1000);
   },
-  computed: {},
   methods: {
     updateCount() {
+      // set current year, current day and  the target countdown date
       const thisYear = new Date().getFullYear();
       const target = new Date(`January 01 ${thisYear + 11} 00:00:00`);
-
       const today = new Date();
+      // calculate the difference and uptade data accordingly
       const diff = target - today;
       this.days = Math.floor(diff / 1000 / 60 / 60 / 24);
       this.hours = Math.floor(diff / 1000 / 60 / 60) % 24;
@@ -186,7 +187,6 @@ export default {
           padding: 1em;
           p:first-child {
             font-size: 2rem;
-            text-transform: lowercase;
           }
         }
       }
@@ -204,6 +204,24 @@ export default {
           button {
             font-size: 0.7rem;
             padding: 0.5em;
+          }
+        }
+      }
+    }
+  }
+}
+@media screen and (max-width: 450px) {
+  .container-fluid {
+    .wrapper {
+      .countdown {
+        flex-wrap: wrap;
+        div {
+          padding: 1em;
+          p:first-child {
+            font-size: 1rem;
+          }
+          p:nth-child(2) {
+            text-transform: lowercase;
           }
         }
       }

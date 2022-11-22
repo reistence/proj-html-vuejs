@@ -87,6 +87,7 @@ export default {
   },
   methods: {
     showEvent(clickedEvent) {
+      // set the key active to true to the element clicked
       this.currentEvent = clickedEvent;
     },
   },
@@ -285,6 +286,22 @@ export default {
       p {
         font-size: 0.6rem;
       }
+    }
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .program {
+    display: flex;
+    flex-direction: column;
+
+    .program-info {
+      width: 100%;
+      display: flex;
+      flex-direction: row;
+    }
+    .program-content {
+      width: 100%;
     }
   }
 }

@@ -42,6 +42,7 @@ export default {
   },
   methods: {
     showFullTxt(index) {
+      //toggle the showMore key of the clicked news element to show the longTxt of that element
       this.news[index].showMore = !this.news[index].showMore;
     },
   },
@@ -195,6 +196,18 @@ export default {
   .news-articles {
     .card {
       margin-bottom: 0;
+    }
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .news-articles {
+    flex-direction: column;
+    gap: 7em;
+    margin-bottom: 4em;
+    .card {
+      margin-bottom: 0;
+      width: 100%;
     }
   }
 }

@@ -56,50 +56,52 @@ export default {
       counter: 0,
     };
   },
-  created() {},
+  computed: {
+    // splice first 4 speakers from [speakers]
+    firstFour() {
+      return this.speakers.slice(0, 4);
+    },
+    // splice second 4 speakers from [speakers]
+    secondFour() {
+      return this.speakers.slice(4, 8);
+    },
+  },
   methods: {
     showNext4() {
-      let firstFour;
-      let secondFour;
-      firstFour = this.speakers.slice(0, 4);
-      secondFour = this.speakers.slice(4, 8);
-
+      //toggle the active key in the two different groups of speakers according to which is already active
       if (this.counter === 0) {
-        secondFour.forEach((element) => {
+        this.secondFour.forEach((element) => {
           element.active = true;
         });
-        firstFour.forEach((element) => {
+        this.firstFour.forEach((element) => {
           element.active = false;
         });
         this.counter++;
       } else {
-        firstFour.forEach((element) => {
+        this.firstFour.forEach((element) => {
           element.active = true;
         });
-        secondFour.forEach((element) => {
+        this.secondFour.forEach((element) => {
           element.active = false;
         });
         this.counter--;
       }
     },
     showPrev4() {
-      let firstFour;
-      let secondFour;
-      firstFour = this.speakers.slice(0, 4);
-      secondFour = this.speakers.slice(4, 8);
+      //toggle the active key in the two different groups of speakers according to which is already active
       if (this.counter === 0) {
-        secondFour.forEach((element) => {
+        this.secondFour.forEach((element) => {
           element.active = true;
         });
-        firstFour.forEach((element) => {
+        this.firstFour.forEach((element) => {
           element.active = false;
         });
         this.counter++;
       } else {
-        firstFour.forEach((element) => {
+        this.firstFour.forEach((element) => {
           element.active = true;
         });
-        secondFour.forEach((element) => {
+        this.secondFour.forEach((element) => {
           element.active = false;
         });
         this.counter--;
