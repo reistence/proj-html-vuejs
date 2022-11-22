@@ -154,7 +154,7 @@ export default {
     </div>
   </div>
 </template>
-<style lang="scss">
+<style lang="scss" scoped>
 @use "../styles/partials/variables" as *;
 
 .container {

@@ -78,13 +78,19 @@ export default {
 .contacts-block {
   width: 60%;
   margin: 2em auto 0;
+
+  hr {
+    width: 85%;
+    margin: 0 auto;
+  }
   .contacts {
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
     margin-top: 0.6em;
-    width: 100%;
+    width: 85%;
+    margin: 0.6em auto;
     gap: 1em;
     div {
       display: flex;

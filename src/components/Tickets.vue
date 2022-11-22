@@ -180,8 +180,7 @@ export default {
     color: $white;
 
     &:hover {
-      transform: scaleY(1.2);
-      transition: 300ms;
+      transform: none;
     }
   }
 }
@@ -194,6 +193,7 @@ export default {
       top: 0;
       left: 0;
       transform: none;
+      padding: 2em 0;
       .tickets-row {
         flex-direction: column;
         .ticket {

@@ -206,7 +206,7 @@ export default {
           transition: 300ms;
           cursor: pointer;
           &:hover {
-            transform: scale(1.2);
+            transform: scale(1.1);
             transition: 300ms;
           }
         }

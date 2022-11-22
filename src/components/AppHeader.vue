@@ -110,11 +110,18 @@ header {
     background-color: rgba(255, 255, 255, 0.594);
     transition: 500ms;
     backdrop-filter: blur(10px);
-
+    height: 40px;
     box-shadow: 1px 1px 5px rgb(192, 191, 191);
+
     &:hover {
       background-color: $white;
       filter: blur(0);
+      height: 70px;
+    }
+
+    .container {
+      justify-content: space-between;
+      padding: 0;
     }
   }
   .container {
@@ -123,7 +130,7 @@ header {
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    height: 70px;
+    height: 100%;
 
     .logo {
       width: 30%;
@@ -184,16 +191,24 @@ header {
         display: block;
         position: relative;
         cursor: pointer;
+        background-color: inherit;
 
         ul {
           position: absolute;
-          top: 30px;
+          top: 40px;
           left: -70px;
           display: flex;
           flex-direction: column;
-          background-color: $white;
-          padding: 0.5em;
+          background-color: rgba(255, 255, 255, 0.594);
+          padding: 1em 0.5em;
           align-items: flex-start;
+          border-radius: 5px;
+          transition: 500ms;
+          backdrop-filter: blur(10px);
+
+          &:hover {
+            background-color: $white;
+          }
         }
       }
     }

@@ -7,7 +7,7 @@ export default {
   <div class="container-fluid">
     <div class="container">
       <div>
-        <p>Copyright Goodlayers, All Rights Reserved</p>
+        <p>&copy; Copyright Goodlayers, All Rights Reserved</p>
       </div>
       <div>
         <ul>

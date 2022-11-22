@@ -87,6 +87,7 @@ p {
   background-color: $white;
   transition: 300ms;
   cursor: pointer;
+  width: calc(100% / 6);
 
   &:hover {
     transform: scale(1.2);
@@ -97,6 +98,12 @@ p {
 @media screen and (max-width: 800px) {
   .sponsors-row {
     flex-wrap: wrap;
+    width: 80%;
+    margin: 0 auto;
+
+    .sponsor {
+      width: calc(100% / 4);
+    }
   }
 }
 </style>
