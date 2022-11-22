@@ -56,6 +56,7 @@ export default {
       counter: 0,
     };
   },
+  created() {},
   methods: {
     showNext4() {
       let firstFour;

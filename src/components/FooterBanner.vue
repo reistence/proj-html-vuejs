@@ -43,6 +43,12 @@ ul {
 }
 li {
   position: relative;
+  transition: 300ms;
+
+  &:hover {
+    color: $white;
+    transition: 300ms;
+  }
 }
 
 li:not(:last-child)::after {
