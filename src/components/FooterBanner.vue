@@ -33,6 +33,7 @@ export default {
   justify-content: space-between;
   color: $gray;
   font-size: 0.8rem;
+  padding: 2em 0;
 }
 
 ul {
